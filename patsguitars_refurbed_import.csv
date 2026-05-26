@@ -175,6 +175,7 @@ product_code,price_gross,vat,currency,stock,name
 10193315201353,1166.39,20,EUR,1,Fender Heartfield 1991 - Blue
 10047284937033,1292.75,20,EUR,1,Fender Highway One Showmaster 2003 - Satin Black
 10047280906569,1166.39,20,EUR,1,Fender Highway One Stratocaster 2006 - Natural
+10080697418057,777.59,20,EUR,1,Fender Japan / Squier 50s Telecaster 2023 - Sunburst
 9961965879625,1016.27,20,EUR,1,Fender Japan 50s Traditional Telecaster 2016 - Butterscotch Blonde
 10099849494857,831.59,20,EUR,1,Fender Japan 54´ Reissue Stratocaster 1993-1994 - Natural - Vintage
 10176887980361,242.99,20,EUR,1,Fender Japan 57 Reissue Stratocaster Body - Sunburst
@@ -200,7 +201,6 @@ product_code,price_gross,vat,currency,stock,name
 10091346198857,831.59,20,EUR,1,Fender Japan CTL-50M 72´ Reissue Telecaster 1992-1993 - Black - Vintage
 9878854533449,831.59,20,EUR,1,Fender Japan CTL-50M Telecaster 1990-1991 - Natural - Vintage
 10080855097673,1052.99,20,EUR,1,Fender Japan Hybrid II Jazzmaster 2022 - Red
-9925407998281,914.75,20,EUR,1,Fender Japan Hybrid Series Telecaster 2018 - Natural
 9947289682249,1016.27,20,EUR,1,Fender Japan Jazzmaster Junior Collection 2022 - Satin Shell Pink
 10008570528073,923.39,20,EUR,1,Fender Japan Junior Collection Stratocaster 2023 - Shell Pink
 10176866222409,1166.39,20,EUR,1,Fender Japan Limited Edition Souichiro Yamauchi Stratocaster 2016 - Fiesta Red
@@ -220,7 +220,6 @@ product_code,price_gross,vat,currency,stock,name
 10175463948617,826.19,20,EUR,1,Fender Japan ST-STD Stratocaster 1995-1996 - Sunburst - Vintage
 10108773531977,831.59,20,EUR,1,Fender Japan Standard Stratocaster 1987-1988 - Black - Vintage
 10008533991753,738.71,20,EUR,1,Fender Japan Standard Stratocaster 1993-1994 - Black - Vintage
-10080768524617,790.55,20,EUR,1,Fender Japan Standard Stratocaster 1994-1995 - Sunburst - Vintage
 10115845161289,831.59,20,EUR,1,Fender Japan Standard Stratocaster 1994-1995 - Sunburst - Vintage
 9925451317577,748.43,20,EUR,1,Fender Japan STM-94M Stratocaster 1994-1995 - Black - Vintage
 10123540332873,831.59,20,EUR,1,Fender Japan STR-80R Stratocaster 1986-1987 - Black Burst - Vintage
