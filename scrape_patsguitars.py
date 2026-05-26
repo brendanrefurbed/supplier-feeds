@@ -9,6 +9,12 @@ PER_PAGE = 250
 MAX_PAGES = 50
 REQUEST_DELAY = 1.0
 
+# Refurbed import settings
+MARKUP = 0.08          # 8% added to Pat's price
+VAT_PERCENT = 20       # Austrian standard VAT – change if needed
+CURRENCY = "EUR"
+DEFAULT_STOCK = 1
+
 CATEGORY_KEYWORDS = {
     "Electric": ["electric", "strat", "tele", "les paul", "sg ", "jazzmaster", "jaguar", "explorer", "flying v"],
     "Acoustic": ["acoustic", "dreadnought", "parlor", "parlour", "folk guitar", "classical", "nylon"],
@@ -73,6 +79,32 @@ def write_csv(rows: list[dict], path: str) -> None:
         writer.writerows(rows)
 
 
+def write_refurbed_csv(rows: list[dict], path: str) -> None:
+    """Write the refurbed price/stock import CSV."""
+    if not rows:
+        return
+    fieldnames = ["product_code", "price_gross", "vat", "currency", "stock", "name"]
+    with open(path, "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer.writeheader()
+        for row in rows:
+            price = row.get("price")
+            if not price or not row.get("available"):
+                continue
+            try:
+                price_gross = round(float(price) * (1 + MARKUP), 2)
+            except (ValueError, TypeError):
+                continue
+            writer.writerow({
+                "product_code": row["product_id"],
+                "price_gross": price_gross,
+                "vat": VAT_PERCENT,
+                "currency": CURRENCY,
+                "stock": DEFAULT_STOCK,
+                "name": row["title"],
+            })
+
+
 def write_xlsx(rows: list[dict], path: str) -> None:
     if not rows:
         return
@@ -96,6 +128,9 @@ def main() -> None:
 
     write_csv(rows, "patsguitars_listings.csv")
     print("Wrote patsguitars_listings.csv")
+
+    write_refurbed_csv(rows, "patsguitars_refurbed_import.csv")
+    print("Wrote patsguitars_refurbed_import.csv")
 
     write_xlsx(rows, "patsguitars_listings.xlsx")
     print("Wrote patsguitars_listings.xlsx")
