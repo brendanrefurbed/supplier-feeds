@@ -3,6 +3,7 @@ name: Daily Supplier Catalog Sync
 on:
   schedule:
     - cron: "0 5 * * *"
+    - cron: "1 9 * * *"
   workflow_dispatch:
 
 permissions:
