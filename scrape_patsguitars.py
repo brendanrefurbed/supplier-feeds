@@ -80,12 +80,12 @@ def write_csv(rows: list[dict], path: str) -> None:
 
 
 def write_refurbed_csv(rows: list[dict], path: str) -> None:
-    """Write the refurbed price/stock import CSV."""
+    """Write the refurbed price/stock import CSV (semicolon-separated)."""
     if not rows:
         return
     fieldnames = ["product_code", "price_gross", "vat", "currency", "stock", "name"]
     with open(path, "w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer = csv.DictWriter(f, fieldnames=fieldnames, delimiter=";")
         writer.writeheader()
         for row in rows:
             price = row.get("price")
